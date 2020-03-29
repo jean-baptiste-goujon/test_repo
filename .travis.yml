@@ -1,0 +1,10 @@
+language: cpp
+
+dist: bionic
+sudo: false
+
+script:
+    - mkdir build
+    - cd build/
+    - cmake ..
+    - cmake --build
