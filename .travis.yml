@@ -1,5 +1,11 @@
 os: linux
 dist: bionic
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - g++-9
 
 language: cpp
 compiler:
