@@ -2,6 +2,9 @@ os: linux
 dist: bionic
 
 language: cpp
+compiler:
+    - gcc
+    - clang
 
 script:
     - mkdir build
