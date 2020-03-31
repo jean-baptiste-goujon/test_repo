@@ -16,13 +16,14 @@ jobs:
         - name: "Clang test"
           os: linux
           dist: bionic
-          compiler: clang
+          addons:
+              apt:
+                  sources:
+                      - llvm-toolchain-bionic-9.0
+                  packages:
+                      - clang-9.0
           env:
               - MATRIX_EVAL="CC=clang && CXX=clang++"
-
-# compiler:
-#     - gcc
-#     - clang
 
 before_install:
     - eval "${MATRIX_EVAL}"
