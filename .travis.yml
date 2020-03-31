@@ -23,7 +23,7 @@ jobs:
                   packages:
                       - clang-9
           env:
-              - MATRIX_EVAL="CC=clang && CXX=clang++"
+              - MATRIX_EVAL="CC=clang-9 && CXX=clang++-9"
 
 before_install:
     - eval "${MATRIX_EVAL}"
